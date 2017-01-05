@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>node-sample &ndash; Admin</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="bs/css/bootstrap.min.css">
+</head>
+<body>
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<strong class="navbar-brand">ChatRoom_Admin</strong>
+			</div>
+			<button id="logout" class="btn btn-danger btn-sm navbar-btn navbar-right">se déconnecter</button>
+			<div class="profile navbar-right">
+				<p class="navbar-text">Bonjour , <%= username %></p>
+			</div>
+		</div>
+	</div>
+</nav>
+<div class="container">   
+	<div class="row">
+		<div class="col-md-6">
+			<table style="width:100%">
+				<tr><td><h2>Gestion des utilisateurs</h2></td></tr>
+				<tr><td>
+					<table>
+						<thead>
+							<tr>
+								<th>Nom d'utilisateur  </th>
+								<th>Actions</th>
+							</tr>
+						</thead>
+						<tbody id="users"></tbody>
+					</table>
+					<br>
+					<form class="input-group ">
+					<span class="input-group-btn">
+						<input id="username" class="form-control" style="width: 180px" type="text" placeholder="Nom d'utilisateur" required>
+						
+						<input id="password" class="form-control" style="width: 180px" type="password" placeholder="Mot de passe" required>
+						<input id="createuser" type="submit" class="btn btn-default " value="Créer l'utilisateur">
+						</span>
+					</form>
+				</td></tr>
+			</table>
+		</div>
+		<div class="col-md-6">
+			<table style="width:100%">
+				<tr><td><h2>Gestion des chambres</h2></td></tr>
+				<tr><td>
+					<table>
+						<thead>
+							<tr>
+								<th>Nom de chambre  </th>
+								<th>Actions</th>
+							</tr>
+						</thead>
+						<tbody id="rooms_admin"></tbody>
+					</table>
+					<br>
+					<form class="input-group ">
+					<span class="input-group-btn">
+						<input id="roomname" type="text" class="form-control" style="width: 180px" placeholder="Nom de la chambre" required>
+						
+						<input id="createroom" type="submit" class="btn btn-default" value="Créer la chambre">
+						</span>
+					</form>
+				</td></tr>
+			</table>
+		</div>
+	</div>
+</div>
+<div class="container">
+	<div class="row">
+		<h2>  Joindre une chambre</h2>
+	</div>
+	<div class="row">
+		<div class="col-md-6">
+			<table>
+				<tr><td>Chambre de chat active : </td>
+					<td id='currentRoom' style="font-weight: bold">Aucune</td>
+				</tr>
+			</table>
+			<br>
+			<div id="chatroomresults"></div>
+			<!--
+			<form>
+				<span id = 'getnamec'>Admin</span> : 
+				<input id="chatroomc" type="text" required disabled>
+				<input id="envoyerchatc" class="btn btn-success" type="submit" value="envoyer" disabled/>
+			</form>
+			-->
+			<br>
+			<span id = 'getnamec'>Admin</span> : 
+			<form>
+			<div class="input-group">
+				
+				<input id="chatroomc" type="text" class="form-control" required disabled>
+				<span class="input-group-btn">
+					<button id="envoyerchatc" class="btn btn-default" type="submit" disabled>Envoyer!</button>
+				</span>
+			</div>
+			</form>
+		</div>
+		<div class="col-md-3">
+			<table>
+				<thead>
+					<tr>
+						<th>Nom de chambre</th>
+						<th>Joindre</th>
+					</tr>
+				</thead>
+				<tbody id="rooms"></tbody>
+			</table>
+		</div>
+		<div class="col-md-3">
+			<p><strong>Qui Est En Ligne</strong></p>
+			<div id="online"></div>
+		</div>
+	</div>
+
+<br>
+<div id="results"></div>
+<br>
+</div>
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/client.js"></script>
+<script src="/js/admin.js"></script>
+</body>
+</html>

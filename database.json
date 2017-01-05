@@ -1,0 +1,19 @@
+{
+    "users": {
+        "Admin": "$2a$08$QBoYu4DiGQYaR3yMs8CG5OAn7T5RmDzFjWv/O.HWJpYur9sINOx9i",
+        "jixiaoze": "$2a$08$eJdaSKbEU.O9GO2ffvxPt.nyay./pm2Vog6.QZmZVxEjCHiefjVje",
+        "Amine": "$2a$08$0Zu0RtPTtct1LPfz4oX/dO2LTtPpZKbl4prjp3DRdaEmSG3euVQJ2",
+        "mouad": "$2a$08$E4yDa0/0e/JROtGp1nVlG.uR2OP2WDGx36sPITVzPqbNnMhtQo.aO",
+        "ibrahim": "$2a$08$zflDiaM/gGn4C9TsnTajMuY/H86FCxZRL7SXEBfSCaBTQasMsqDcu"
+    },
+    "rooms": {
+        "Friends forever": {
+            "Admin20170105033742": "Hello world",
+            "mouad20170105033806": "Hello"
+        },
+        "This is not a joke": {
+            "Admin20170105120550": "hi"
+        },
+        "Family time": {}
+    }
+}
